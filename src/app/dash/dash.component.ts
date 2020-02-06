@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { AngularFirestore, AngularFirestoreCollection  } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
+export interface Item {mail: string, password: string;}
 @Component({
   selector: 'app-dash',
   templateUrl: './dash.component.html',
@@ -28,6 +31,11 @@ export class DashComponent {
       ];
     })
   );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  private itemsCollection: AngularFirestoreCollection<Item>;
+  items: Observable<any[]>;
+  constructor(private breakpointObserver: BreakpointObserver, db: AngularFirestore, private readonly afs: AngularFirestore) {
+  this.itemsCollection = afs.collection<Item>('Utilisateurs');
+  this.items = db.collection('Utilisateurs').valueChanges();
+  }
 }
+

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+export interface Item { mail: string; password: string; }
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

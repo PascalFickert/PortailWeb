@@ -12,7 +12,7 @@ export class NavbarComponent {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
-      map(result => result.matches),
+      map(result => true),
       shareReplay()
     );
 

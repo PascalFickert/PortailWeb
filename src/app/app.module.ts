@@ -31,7 +31,13 @@ import { DragndropComponent } from './dragndrop/dragndrop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FicheUtilisateurComponent } from './fiche-utilisateur/fiche-utilisateur.component';
 import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
-
+import { ActualiteComponent } from './actualite/actualite.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { FicheActualiteComponent } from './fiche-actualite/fiche-actualite.component';
+import { AddActuComponent } from './add-actu/add-actu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +50,10 @@ import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
     TreeComponent,
     DragndropComponent,
     FicheUtilisateurComponent,
-    UtilisateursComponent
+    UtilisateursComponent,
+    ActualiteComponent,
+    FicheActualiteComponent,
+    AddActuComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +76,10 @@ import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
     MatPaginatorModule,
     MatSortModule,
     MatTreeModule,
-    DragDropModule
+    DragDropModule,
+    AngularFireModule.initializeApp(environment.firebase, 'portailWeb'),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

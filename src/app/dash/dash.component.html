@@ -22,3 +22,9 @@
     </mat-grid-tile>
   </mat-grid-list>
 </div>
+
+<ul>
+  <li *ngFor="let item of items | async">
+    {{ item.mail }}
+  </li>
+</ul>

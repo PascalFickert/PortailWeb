@@ -9,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UtilisateursComponent implements OnInit {
   utilisateurs: User[];
-  //nom: 'ue', prenom: 'jean', mail: 'fjkjjed@odfo.com', role: 'touriste', urlPhoto: '00jhsdk'}]
   constructor(private getUsersService: GetUtilisateursService) { }
 
   ngOnInit() {
