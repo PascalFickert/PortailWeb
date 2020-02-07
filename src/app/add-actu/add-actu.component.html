@@ -6,7 +6,8 @@
   <input matInput type="text" formControlName="date" placeholder="Date:">
   </mat-form-field>
   <mat-form-field>
-    <input matInput type="text" formControlName="contenu" placeholder="Le contenu de votre article">
-    </mat-form-field>
+    <textarea matInput formControlName="contenu" placeholder="Le contenu de votre article"></textarea>
+  </mat-form-field>
+  <hr>
   <button mat-button [disabled]="!profileForm.valid">Créer cette actualité</button>
 </form>
