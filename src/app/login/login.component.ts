@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     const mdp = this.profileForm.value.mdp;
     this.auth.connectToFirebase();
     const item: Item = {mail, mdp};
-    this.itemsCollection.add(item);
+    //this.itemsCollection.add(item);
   }
 
 }
