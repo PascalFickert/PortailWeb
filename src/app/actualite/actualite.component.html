@@ -1,3 +1,5 @@
-<div *ngFor="let news of items | async">
+
+<h1 class="mat-h1">Actus</h1>
+<div id="page" *ngFor="let news of items | async" >
   <app-fiche-actualite [news]="news"></app-fiche-actualite>
 </div>

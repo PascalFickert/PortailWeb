@@ -1,15 +1,14 @@
 <p>Entrez votre adresse mail: </p>
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <p style="font-size:12px">Format: a@b.com</p>
     <mat-form-field>
     <input matInput type="text" formControlName="mail" placeholder="Mail">
     </mat-form-field>
+    <p style="font-size:12px">Au moins 8 caractères:</p>
     <mat-form-field>
     <input matInput type="password" formControlName="mdp" placeholder="Mot de passe:">
     </mat-form-field>
     <button mat-button [disabled]="!profileForm.valid">Se connecter</button>
 </form>
-
-<img src="../assets/toki.jpg">
-<img src="../assets/ii.jpg">
 
 

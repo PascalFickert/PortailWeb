@@ -21,13 +21,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { TreeComponent } from './tree/tree.component';
 import { MatTreeModule } from '@angular/material/tree';
-import { DragndropComponent } from './dragndrop/dragndrop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FicheUtilisateurComponent } from './fiche-utilisateur/fiche-utilisateur.component';
 import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
@@ -38,6 +35,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { FicheActualiteComponent } from './fiche-actualite/fiche-actualite.component';
 import { AddActuComponent } from './add-actu/add-actu.component';
+import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,9 +44,6 @@ import { AddActuComponent } from './add-actu/add-actu.component';
     ProfileEditorComponent,
     DashComponent,
     NavbarComponent,
-    TableComponent,
-    TreeComponent,
-    DragndropComponent,
     FicheUtilisateurComponent,
     UtilisateursComponent,
     ActualiteComponent,
@@ -80,6 +75,7 @@ import { AddActuComponent } from './add-actu/add-actu.component';
     AngularFireModule.initializeApp(environment.firebase, 'portailWeb'),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireAuthGuardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

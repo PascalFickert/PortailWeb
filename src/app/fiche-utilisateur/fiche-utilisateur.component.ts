@@ -10,7 +10,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FicheUtilisateurComponent implements OnInit {
   @Input()
   public user: User;
-
   constructor() { }
 
   ngOnInit() {

@@ -1,5 +1,10 @@
 
-<div *ngFor="let user of utilisateurs">
-  <app-fiche-utilisateur [user]="user">
-  </app-fiche-utilisateur>
-</div>
+<div class="grid-container">
+  <h1 class="mat-h1">Utilisateurs</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let user of utilisateurs | async" [colspan]="1" [rowspan]="1">
+      <app-fiche-utilisateur [user]="user">
+      </app-fiche-utilisateur>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>

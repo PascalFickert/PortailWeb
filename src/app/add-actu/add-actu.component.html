@@ -1,13 +1,15 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <p style="font-size:12px">Minimum 12 caractères:</p>
   <mat-form-field>
   <input matInput type="text" formControlName="titre" placeholder="Titre de l'article">
   </mat-form-field>
+  <p style="font-size:12px">Minimum 100 caractères:</p>
   <mat-form-field>
-  <input matInput type="text" formControlName="date" placeholder="Date:">
+    <textarea matInput formControlName="contenu" placeholder="Le contenu de votre article">
+
+    </textarea>
   </mat-form-field>
-  <mat-form-field>
-    <textarea matInput formControlName="contenu" placeholder="Le contenu de votre article"></textarea>
-  </mat-form-field>
+
   <hr>
   <button mat-button [disabled]="!profileForm.valid">Créer cette actualité</button>
 </form>
