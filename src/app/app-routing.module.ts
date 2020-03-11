@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'actualite', component: ActualiteComponent },
   { path: 'add-actualite', component: AddActuComponent },
   { path: 'navbar', component: NavbarComponent },
+  { path: '', component: DashComponent },
   { path: 'login', component: LoginComponent, canActivate: [AngularFireAuthGuard],
   data: {authGuardPipe: redirectLoggedInToDashboard, redirectUnauthorizedToLogin}},
 ];

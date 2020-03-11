@@ -2,7 +2,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthentificationService } from './../authentification.service';
 import { Observable } from 'rxjs';
 export interface Item { mail: string; mdp: string; }
 @Component({
@@ -31,18 +30,14 @@ export class LoginComponent implements OnInit {
   }
 
   SignIn(email: string, password: string) {
-    /*console.log(email);
-    console.log(password);*/
     this.angularFireAuth
     .auth
     .signInWithEmailAndPassword(email, password)
-    //.then(res => this.router.navigate(['app-navbar']))
     .catch(err => {
       alert('Mot de passe et/ou adresse mail incorrect.e.s');
     });
     }
 
-    /* Sign out */
     SignOut() {
     this.angularFireAuth.auth.signOut();
     }

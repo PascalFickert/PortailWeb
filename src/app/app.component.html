@@ -1,8 +1,9 @@
 
 
 <div *ngIf="auth.user | async as user; else showLogin">
+<app-navbar>
+</app-navbar>
 
-  <app-navbar></app-navbar>
 </div>
 <ng-template #showLogin>
   <app-login>

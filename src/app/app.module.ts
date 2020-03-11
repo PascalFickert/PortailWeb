@@ -36,6 +36,7 @@ import { environment } from '../environments/environment';
 import { FicheActualiteComponent } from './fiche-actualite/fiche-actualite.component';
 import { AddActuComponent } from './add-actu/add-actu.component';
 import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
+
 @NgModule({
   declarations: [
     AppComponent,
