@@ -18,10 +18,10 @@ export class FileuploadComponent implements OnInit {
   ngOnInit() {
   }
   onSubmit(event: any) {
-    /*
+
     alert('Erreur lors de l\'upload, vous allez être redirigé vers la page d\'accueil');
     this.router.navigate(['dash']);
-    */
+
   }
 
 }
