@@ -7,6 +7,7 @@ import { DashComponent } from './dash/dash.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AngularFireAuthGuard, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'utilisateurs', component: UtilisateursComponent },
   { path: 'actualite', component: ActualiteComponent },
   { path: 'add-actualite', component: AddActuComponent },
+  { path: 'add-file', component: FileuploadComponent },
   { path: 'navbar', component: NavbarComponent },
   { path: '', component: DashComponent },
   { path: 'login', component: LoginComponent, canActivate: [AngularFireAuthGuard],
